@@ -1,0 +1,46 @@
+ <!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>Low</th>
+        <th>Medium</th>
+        <th>High</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Low</td>
+        <td th:text="${riskMatrix[0][0]}">&nbsp;</td>
+        <td th:text="${riskMatrix[0][1]}">&nbsp;</td>
+        <td th:text="${riskMatrix[0][2]}">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Medium</td>
+        <td th:text="${riskMatrix[1][0]}">&nbsp;</td>
+        <td th:text="${riskMatrix[1][1]}">&nbsp;</td>
+        <td th:text="${riskMatrix[1][2]}">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>High</td>
+        <td th:text="${riskMatrix[2][0]}">&nbsp;</td>
+        <td th:text="${riskMatrix[2][1]}">&nbsp;</td>
+        <td th:text="${riskMatrix[2][2]}">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Critical</td>
+        <td th:text="${riskMatrix[3][0]}">&nbsp;</td>
+        <td th:text="${riskMatrix[3][1]}">&nbsp;</td>
+        <td th:text="${riskMatrix[3][2]}">&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
