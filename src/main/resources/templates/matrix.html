@@ -1,13 +1,31 @@
  <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Risk Matrix</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<table>
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver1 m-b-110">
+                <table data-vertable="ver1">
+
     <thead>
-    <tr>
+    <tr class="row100 head">
         <th></th>
         <th>Low</th>
         <th>Medium</th>
@@ -15,32 +33,41 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
+    <tr  class="row100">
         <td>Low</td>
         <td th:text="${riskMatrix[0][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[0][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[0][2]}">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="row100">
         <td>Medium</td>
         <td th:text="${riskMatrix[1][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[1][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[1][2]}">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="row100">
         <td>High</td>
         <td th:text="${riskMatrix[2][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[2][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[2][2]}">&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="row100">
         <td>Critical</td>
         <td th:text="${riskMatrix[3][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[3][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[3][2]}">&nbsp;</td>
     </tr>
+    <tr>
+        <td>
+            <a href="/risk">Add New driver</a>
+        </td>
+    </tr>
     </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
 
 </body>
 </html>

@@ -1,7 +1,11 @@
 package com.bancofuturo.riskmatrix.web.controller;
 
+
+import javax.validation.constraints.NotNull;
+
 public class Risk {
 
+    @NotNull
     private String driver;
     private Integer impact;
     private Integer urgency;

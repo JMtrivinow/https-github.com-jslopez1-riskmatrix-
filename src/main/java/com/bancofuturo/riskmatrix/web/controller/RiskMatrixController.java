@@ -5,6 +5,7 @@ import com.bancofuturo.riskmatrix.ManageRiskMatrix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,7 +29,11 @@ public class RiskMatrixController {
     }
 
     @PostMapping("/risk")
-    public String greetingSubmit(@ModelAttribute Risk risk, Model model) {
+    public String greetingSubmit(@ModelAttribute Risk risk, Model model, BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()) {
+            return "risk";
+        }
         model.addAttribute("riskMatrix", manageRiskMatrix.addRiskToMatrix(risk));
         return "matrix";
     }

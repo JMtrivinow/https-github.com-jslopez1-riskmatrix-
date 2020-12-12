@@ -14,7 +14,7 @@ public class ManageRiskMatrix {
             fillMatrix();
             firsTime=Boolean.FALSE;
         }
-       riskMatrix[risk.getUrgency()][risk.getImpact()]=risk.getDriver();
+       riskMatrix[risk.getUrgency()][risk.getImpact()]=riskMatrix[risk.getUrgency()][risk.getImpact()]+" \n"+risk.getDriver();
        return riskMatrix;
     }
 

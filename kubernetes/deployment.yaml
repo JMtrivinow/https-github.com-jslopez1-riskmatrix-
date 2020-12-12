@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: riskmatrix
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: riskmatrix
+    spec:
+          image: riskmatrix:1.0.0
+          name: riskmatrix
+          ports:
+          - containerPort: 8080
+          stdin: true
+          tty: true
+status: {}
