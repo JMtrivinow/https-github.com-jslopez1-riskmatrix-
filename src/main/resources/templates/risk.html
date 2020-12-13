@@ -1,29 +1,39 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Add Drive</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Add Driver</h1>
 
 <div class="center">
-<form action="#" th:action="@{/risk}" th:object="${risk}" method="post">
-    <p>Driver: <input type="text" th:field="*{driver}" /></p>
-    <p>Impact: <select th:field="*{impact}">
-        <option th:value="0" th:text="Low"></option>
-        <option th:value="1" th:text="Medum"></option>
-        <option th:value="2" th:text="High"></option>
-    </select></p>
-    <p>Urgency: <select th:field="*{urgency}">
-        <option th:value="0" th:text="Low"></option>
-        <option th:value="1" th:text="Medum"></option>
-        <option th:value="2" th:text="High"></option>
-        <option th:value="3" th:text="Critical"></option>
-    </select></p>
+    <h1>Add Risk</h1>
+<form action="#" th:action="@{/matrix}" th:object="${risk}" method="get">
+    <div class="form-group">
+        <label for="driverInput">Driver:</label>
+        <input  class="form-control" id="driverInput" type="text" th:field="*{driver}" >
+    </div>
+    <div class="form-group">
+        <label for="impactInput">Impact:</label>
+        <select class="form-control" id="impactInput" th:field="*{impact}">
+            <option th:value="0" th:text="Low"></option>
+            <option th:value="1" th:text="Medium"></option>
+            <option th:value="2" th:text="High"></option>
+        </select>
+    </div>
 
-    <p><button type="submit" class="btn btn-default" >Submit</button>
+    <div class="form-group">
+        <label for="urgencyInput">Urgency:</label>
+        <select class="form-control" id="urgencyInput" th:field="*{urgency}">
+            <option th:value="0" th:text="Low"></option>
+            <option th:value="1" th:text="Medium"></option>
+            <option th:value="2" th:text="High"></option>
+            <option th:value="3" th:text="Critical"></option>
+        </select>
+    </div>
+    <p><button type="submit" class="btn btn-default" >Add Risk</button>
 </form>
 </div>
 </body>

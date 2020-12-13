@@ -16,6 +16,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
 </head>
 <body>
 <div class="limiter">
@@ -25,34 +26,36 @@
                 <table data-vertable="ver1">
 
     <thead>
+
     <tr class="row100 head">
-        <th></th>
+        <th class="columnTitle "><text class="columnPrincipal">Urgency/Impact</text></th>
         <th>Low</th>
         <th>Medium</th>
         <th>High</th>
     </tr>
     </thead>
     <tbody>
+
     <tr  class="row100">
-        <td>Low</td>
+        <td class="columnTitle">Low</td>
         <td th:text="${riskMatrix[0][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[0][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[0][2]}">&nbsp;</td>
     </tr>
     <tr class="row100">
-        <td>Medium</td>
+        <td class="columnTitle">Medium</td>
         <td th:text="${riskMatrix[1][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[1][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[1][2]}">&nbsp;</td>
     </tr>
     <tr class="row100">
-        <td>High</td>
+        <td class="columnTitle" >High</td>
         <td th:text="${riskMatrix[2][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[2][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[2][2]}">&nbsp;</td>
     </tr>
     <tr class="row100">
-        <td>Critical</td>
+        <td class="columnTitle" >Critical</td>
         <td th:text="${riskMatrix[3][0]}">&nbsp;</td>
         <td th:text="${riskMatrix[3][1]}">&nbsp;</td>
         <td th:text="${riskMatrix[3][2]}">&nbsp;</td>

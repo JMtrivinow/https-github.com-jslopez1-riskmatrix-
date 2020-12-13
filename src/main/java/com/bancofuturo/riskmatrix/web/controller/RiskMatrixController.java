@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class RiskMatrixController {
@@ -28,12 +27,8 @@ public class RiskMatrixController {
         return "risk";
     }
 
-    @PostMapping("/risk")
+    @GetMapping("/matrix")
     public String greetingSubmit(@ModelAttribute Risk risk, Model model, BindingResult bindingResult) {
-
-        if (bindingResult.hasErrors()) {
-            return "risk";
-        }
         model.addAttribute("riskMatrix", manageRiskMatrix.addRiskToMatrix(risk));
         return "matrix";
     }
