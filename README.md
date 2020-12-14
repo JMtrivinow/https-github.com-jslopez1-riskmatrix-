@@ -5,9 +5,8 @@
 
 This project allow to add drivers to a risk matrix.
 
-**Risk Matrix**
+# **Diagram**
 
-https://github.com/jslopez1/riskmatrix/blob/master/Banco%20Futuro.png
 ![Solution Diagram in High Level](https://github.com/jslopez1/riskmatrix/blob/master/Banco%20Futuro.png)
 
 
